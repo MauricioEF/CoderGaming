@@ -1,0 +1,47 @@
+
+.mainContainer {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 20px 0 20px 0;
+}
+
+.videogameCard {
+    width: 250px;
+    height: 400px;
+    border:1px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.videogameCard > img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.title {
+    text-align: center;
+    font-size:1.5rem;
+    font-weight: 900;
+}
+
+.price {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.description {
+    text-align: center;
+    font-size:0.75rem;
+}
+
+.paginationPanel {
+    width:50vw;
+    height:100px;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    vertical-align: middle;
+}

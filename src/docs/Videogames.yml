@@ -1,0 +1,41 @@
+paths:
+  /api/videogames:
+    get:
+      summary: Devuelve los videojuegos de la base de datos
+      tags:
+        - Videogames
+      responses:
+        "200":
+          description: Los Videojuegos se encontraron satisfactoriamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Status de la operación
+                  payload:
+                    type: array
+                    items:
+                      $ref: "#components/schemas/Videogame"
+        "500":
+          description: Error del servidor. Revisar que la conexión a la base de datos sea consistente.
+
+components:
+  schemas:
+    Videogame:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: Id del videojuego
+        title:
+          type: string
+          description: Nombre del videojuego
+        description:
+          type: string
+          descrtipion: Descripción del videojuego
+        price:
+          type: number
+          description: Precio del videojuego

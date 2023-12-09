@@ -1,0 +1,96 @@
+.mainContainer {
+    height:650px;
+    display:flex;
+    flex-direction: row;
+}
+
+.title {
+    text-align: center;
+}
+
+.detailsPanel {
+    width:60%;
+    outline: 1px solid black;
+    overflow: hidden;
+}
+
+.imagesPanel {
+    display:flex;
+    flex-direction: row;
+    height:50%;
+}
+
+.mainImage {
+    width:60%;
+}
+
+.mainImage > img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.images {
+    width:40%;
+    padding:5px;
+    display:flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.imageThumbnail { 
+    flex-basis: calc(50% - 20px); margin: 10px;
+}
+.imageThumbnail > img {
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
+
+
+.chatPanel {
+    width:40%;
+    outline:1px solid black;
+}
+
+.titlePanel {
+    height:15%;
+    padding:0;
+    margin:0;
+}
+
+.titleChat{
+    text-align: center;
+    padding:0;
+    margin:0;
+}
+
+#loadingText {
+    text-align: center;
+}
+
+.chatContent {
+    width:100%;
+    height:75%;
+    outline:1px solid red;
+}
+
+.inputPanel {
+    height:10%;
+    padding:0 5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputPanel > textarea {
+    width:70%;
+    height:50%;
+    resize:none;
+}
+
+.inputPanel > button {
+    width: 25%;
+    height:40px;
+}

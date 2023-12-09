@@ -1,0 +1,40 @@
+<div class='mainContainer'>
+  <div class='detailsPanel'>
+    <h1 class='title'>{{videogame.title}}</h1>
+    <br />
+    <p>{{videogame.description}}</p>
+    <br />
+    <div class='imagesPanel'>
+      <div class='mainImage'>
+        <img id='currentImage' src={{videogame.images.[0]}} />
+      </div>
+      <div class='images'>
+        {{#each videogame.images}}
+          <div
+            class='imageThumbnail'
+            onmouseenter="changeCurrentImage('{{this}}')"
+          >
+            <img src={{this}} />
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <p>¡Quiero este juego!</p>
+    <button onclick="addVideogame('{{videogame._id}}')">Agregar a mi librería</button>
+  </div>
+  <div class='chatPanel'>
+    <div class="titlePanel">
+      <h2 class='titleChat'>¿Qué se está diciendo de este juego?</h2>
+      <p id='loadingText'></p>
+    </div>
+    <div id='chatContent' class='chatContent'></div>
+    <div class='inputPanel'>
+      <textarea id="chatBox"></textarea>
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src='/js/GameDetails.js'></script>

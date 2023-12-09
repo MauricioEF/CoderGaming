@@ -1,0 +1,36 @@
+<h1>Hola</h1>
+
+<div class='mainContainer'>
+  {{#each videogames}}
+  <div  class="videogameCard">
+        <p class="title">{{this.title}}</p>
+        {{#if this.price}}
+            <p class="price">{{this.price}}</p>
+        {{else}}
+            <p class="price">Gratis</p>
+        {{/if}}
+        <img src={{this.images.[0]}} />
+        <br/>
+        <br/>
+        <br/>
+        <a href="/videogames/{{this._id}}"><button>Ver detalles</button></a>
+        
+  </div>
+  {{/each}}
+</div>
+
+<div class="paginationPanel">
+    {{#if hasPrevPage}}
+    <a href="/?page={{prevPage}}"><button>Anterior</button></a>
+    {{/if}}
+
+    <h4>{{page}}</h4>
+
+    {{#if hasNextPage}}
+    <a href="/?page={{nextPage}}"><button>Siguiente</button></a>
+    {{/if}}
+</div>
+
+
+
+<script src="/js/home.js"></script>
